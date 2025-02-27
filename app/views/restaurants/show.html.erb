@@ -1,0 +1,21 @@
+<div class="container">
+<h1>Restaurants#show</h1>
+<div class="card mb-3">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @restaurant.name %></h5>
+    <p class="card-text">Is an <%= @restaurant.category %> @restaurant, <%= @restaurant.address %>, phone number : <%= @restaurant.phone_number %></p>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+  </div>
+</div>
+
+
+<%= link_to edit_restaurant_path(@restaurant) do %>
+  <i class="fa-solid fa-pen-to-square"></i>
+<% end %>
+
+<%= link_to restaurant_path(@restaurant), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+  <i class="fa-solid fa-trash"></i>
+<% end %>
+</div>
+<p>Find me in app/views/restaurants/show.html.erb</p>

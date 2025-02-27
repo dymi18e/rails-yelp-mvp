@@ -1,0 +1,14 @@
+<h1>Restaurants#index</h1>
+<div class="resto d-flex justify-content-center flex-wrap ">
+<% @restaurants.each do | restaurant | %>
+  <div class="card col-sm-2 mb-3" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= restaurant.name %></h5>
+    <p class="card-text">Is an <%= restaurant.category %> restaurant, <%= restaurant.address %>, phone number : <%= restaurant.phone_number %></p>
+    <%= link_to "view", restaurant_path(restaurant) %>
+  </div>
+</div>
+<% end  %>
+</div>
+<p>Find me in app/views/restaurants/index.html.erb</p>
